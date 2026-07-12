@@ -21,7 +21,7 @@ button { cursor: pointer; padding: 10px; background: #e50914; color: white; bord
 span { font-weight: bold; }
 .seats-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
 
-/* Klasa dla pojedynczego fotela, który stworzysz w JS */
+
 .cinema-seat {
   width: 40px;
   height: 40px;
