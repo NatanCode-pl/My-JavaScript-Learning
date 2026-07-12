@@ -1,0 +1,15 @@
+.clinic-panel {
+  border: 3px solid #007bff;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 400px;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+.input-box { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+input[type="text"] { padding: 8px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; }
+button { cursor: pointer; padding: 10px; background: #007bff; color: white; border: none; border-radius: 5px; font-weight: bold; }
+.status-box { background: #e9ecef; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+#queue-count { font-weight: bold; color: #007bff; }
+#clinic-status { font-weight: bold; color: #28a745; }
+.list-box { background: #fff; padding: 10px; border: 1px solid #dee2e6; border-radius: 5px; min-height: 50px; }

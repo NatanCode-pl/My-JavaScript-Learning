@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="js 10.css">
+    </head>
+    <body>
+        <div class="warehouse-panel">
+  <h2>📦 Panel Zarządzania Magazynem</h2>
+  
+  <div class="controls">
+    <label>Kod priorytetu (A, B lub C):</label>
+    <input type="text" id="priority-code" placeholder="np. A">
+    <button id="add-box-btn">Przyjmij Paczkę</button>
+    <button id="dispatch-box-btn" class="btn-danger">Wydaj Ostatnią Paczkę</button>
+  </div>
+
+  <div class="status-box">
+    <p>Ostatnia akcja: <span id="warehouse-status">Brak akcji</span></p>
+  </div>
+
+  <div class="storage">
+    <h3>🚚 Strefa załadunku kurierskiego:</h3>
+    <div id="boxes-container"></div>
+  </div>
+</div>
+        <script src="js 10.js" defer></script>
+    </body>
+</html>

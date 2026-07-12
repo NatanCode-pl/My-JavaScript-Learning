@@ -1,0 +1,34 @@
+.game-panel {
+  border: 3px solid #28a745;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 450px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #111;
+  color: #fff;
+}
+.control-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+input[type="number"] { width: 60px; padding: 5px; font-size: 16px; background: #222; color: #fff; border: 1px solid #444; }
+button { cursor: pointer; padding: 10px; background: #28a745; color: white; border: none; border-radius: 5px; font-weight: bold; }
+.status-box { background: #222; padding: 10px; border-radius: 5px; margin-bottom: 20px; text-align: center; }
+#game-status { font-weight: bold; color: #ffc107; }
+
+/* Kontener na paski HP */
+.health-bar {
+  display: flex;
+  gap: 5px;
+  min-height: 30px;
+}
+
+/* Klasa dla pojedynczego klocka HP, który stworzysz w JS */
+.hp-block {
+  width: 30px;
+  height: 30px;
+  background-color: #28a745;
+  border: 1px solid #fff;
+}

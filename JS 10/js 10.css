@@ -1,0 +1,15 @@
+.warehouse-panel {
+  border: 3px solid #6c757d;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 450px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f1f3f5;
+}
+.controls { display: flex; flex-direction: column; gap: 10px; margin-bottom: 25px; }
+input[type="text"] { padding: 8px; font-size: 16px; text-transform: uppercase; }
+button { cursor: pointer; padding: 10px; background: #6c757d; color: white; border: none; border-radius: 5px; font-weight: bold; }
+.btn-danger { background: #dc3545; }
+.status-box { background: #ced4da; padding: 12px; border-radius: 5px; margin-bottom: 20px; font-weight: bold; }
+.storage { background: #fff; padding: 15px; border: 2px dashed #6c757d; min-height: 80px; }
+.box-item { background: #e67e22; color: white; padding: 5px 10px; margin: 5px 0; border-radius: 3px; font-weight: bold; }

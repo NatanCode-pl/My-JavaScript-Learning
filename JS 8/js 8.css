@@ -1,0 +1,15 @@
+.pump-station {
+  border: 3px solid #ffc107;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 450px;
+  font-family: monospace;
+  background-color: #222;
+  color: #fff;
+}
+.input-box { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+input[type="number"] { padding: 8px; font-size: 16px; background: #333; color: #fff; border: 1px solid #555; }
+button { cursor: pointer; padding: 10px; background: #ffc107; color: #000; border: none; border-radius: 5px; font-weight: bold; font-size: 16px; }
+.console-box { background: #111; padding: 15px; border-radius: 5px; border: 1px solid #333; }
+#pump-status { font-weight: bold; color: #dc3545; }
+#pump-log p { margin: 5px 0; color: #28a745; }

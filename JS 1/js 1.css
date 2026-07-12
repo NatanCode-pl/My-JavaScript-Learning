@@ -1,0 +1,24 @@
+.account-card {
+  border: 2px solid #333;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 350px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+#status-text {
+  font-weight: bold;
+  color: green;
+}
+#days-counter {
+  font-weight: bold;
+}
+.actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+button {
+  padding: 10px;
+  cursor: pointer;
+}

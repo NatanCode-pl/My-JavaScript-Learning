@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="js 3.css">
+    </head>
+    <body>
+        
+        <div class="cinema-manager">
+  <h2>🍿 System Rezerwacji Kina Master</h2>
+  
+  <div class="setup-box">
+    <label>Ile biletów chcesz kupić? (max 10):</label>
+    <input type="number" id="tickets-count" min="1" max="10" value="1">
+    
+    <label>
+      <input type="checkbox" id="student-discount"> Posiadam legitymację studencką (-50%)
+    </label>
+    
+    <button id="generate-btn">Generuj i Oblicz</button>
+  </div>
+
+  <div class="summary-box">
+    <p>Cena za jeden bilet: <span id="single-price">30</span> zł</p>
+    <p>Do zapłaty łącznie: <span id="total-price">0</span> zł</p>
+  </div>
+
+  <h3>Wybierz swoje miejsca:</h3>
+  <div id="seating-plan" class="seats-container"></div>
+</div>
+
+        <script src="js 3.js" defer></script>
+    </body>
+    </html>

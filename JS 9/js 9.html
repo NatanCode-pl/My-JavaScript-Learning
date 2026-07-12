@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="js 9.css">
+    </head>
+    <body>
+        <div class="clinic-panel">
+  <h2>🏥 System Rejestracji Pacjentów</h2>
+  
+  <div class="input-box">
+    <label>Imię nowego pacjenta:</label>
+    <input type="text" id="patient-name" placeholder="np. Jan">
+    <button id="add-patient-btn">Zapisz Pacjenta</button>
+  </div>
+
+  <div class="status-box">
+    <p>Liczba zapisanych osób: <span id="queue-count">0</span></p>
+    <p>Status rejestracji: <span id="clinic-status">Otwarta</span></p>
+  </div>
+
+  <div class="list-box">
+    <h3>📋 Aktualna lista (podgląd tablicy):</h3>
+    <div id="patients-list"></div>
+  </div>
+</div>
+        <script src="js 9.js" defer></script>
+    </body>
+</html>

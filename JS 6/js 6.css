@@ -1,0 +1,13 @@
+.hr-panel {
+  border: 3px solid #6f42c1;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 400px;
+  font-family: sans-serif;
+  background-color: #f8f9fa;
+}
+.input-box { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+input[type="number"] { width: 70px; padding: 5px; font-size: 16px; }
+button { cursor: pointer; padding: 10px; background: #6f42c1; color: white; border: none; border-radius: 5px; font-weight: bold; }
+.report-box { background: #fff; padding: 15px; border: 1px solid #dee2e6; border-radius: 5px; text-align: center; }
+#decision-output { font-weight: bold; }

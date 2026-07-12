@@ -1,0 +1,18 @@
+.spaceport-panel {
+  border: 4px solid #111;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0b132b;
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+.controls { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+select, input { padding: 10px; font-size: 15px; border-radius: 6px; border: none; background: #1c2541; color: #fff; }
+button { cursor: pointer; padding: 12px; background: #4cc9f0; color: #111; border: none; border-radius: 6px; font-weight: bold; font-size: 16px; }
+.telemetry { background: #1c2541; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 5px solid #4cc9f0; }
+.telemetry p { margin: 8px 0; font-size: 15px; }
+span { font-weight: bold; color: #4cc9f0; }
+.cargo-hold { background: #0b132b; padding: 15px; border: 2px dashed #3a506b; border-radius: 8px; }
+.cargo-block { background: #5bc0be; color: #0b132b; padding: 8px; margin: 6px 0; border-radius: 4px; font-weight: bold; text-align: center; }

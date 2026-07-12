@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="js 11.css">
+    </head>
+    <body>
+        <div class="spaceport-panel">
+  <h2>🚀 Panel Kontroli Misji: Cargo-X</h2>
+  
+  <div class="controls">
+    <label>Typ ładunku:</label>
+    <select id="cargo-type">
+      <option value="SCI">Aparatura Naukowa (10 ton)</option>
+      <option value="MED">Zaopatrzenie Medyczne (20 ton)</option>
+      <option value="GOLD">Kruszce Szlachetne (40 ton)</option>
+    </select>
+
+    <label>Weryfikacja wagi (wpisz wagę wybranego ładunku):</label>
+    <input type="number" id="weight-check" placeholder="np. 10">
+
+    <button id="load-cargo-btn">Załaduj Kontener</button>
+  </div>
+
+  <hr>
+
+  <div class="telemetry">
+    <p>Status Rakiety: <span id="rocket-status">Gotowa do załadunku</span></p>
+    <p>Liczba kontenerów: <span id="cargo-count">0</span> / 4</p>
+    <p>Łączna waga cargo: <span id="total-weight">0</span> ton</p>
+    <p>Wymagane paliwo do startu: <span id="fuel-needed">0</span> litrów</p>
+  </div>
+
+  <div class="cargo-hold">
+    <h3>📦 Ładownia (Podgląc):</h3>
+    <div id="hold-container"></div>
+  </div>
+</div>
+
+        <script src="js 11.js" defer></script>
+    </body>
+</html>

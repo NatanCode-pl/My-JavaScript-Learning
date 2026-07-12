@@ -1,0 +1,35 @@
+.security-panel {
+  border: 3px solid #222;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 400px;
+  font-family: sans-serif;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+input, button {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+input { width: 100px; text-align: center; }
+button { cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 5px; }
+
+/* Kluczowe klasy pomocnicze do zadania */
+.hidden {
+  display: none;
+}
+.alert-danger {
+  color: white;
+  background-color: #dc3545;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.alert-success {
+  color: white;
+  background-color: #28a745;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
