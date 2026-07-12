@@ -15,8 +15,7 @@ input, button {
 input { width: 100px; text-align: center; }
 button { cursor: pointer; background-color: #007bff; color: white; border: none; border-radius: 5px; }
 
-/* Kluczowe klasy pomocnicze do zadania */
-.hidden {
+
   display: none;
 }
 .alert-danger {
