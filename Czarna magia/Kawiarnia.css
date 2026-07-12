@@ -1,0 +1,363 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("elegant.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: "Sofia", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #f0efed; /* Base gold color */
+    text-shadow:
+      0 0 5px #FFD700,
+      0 0 10px #FFC300,
+      0 0 20px #FFB300,
+      0 0 30px #FFA000,
+      0 0 40px #FF8C00;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 0;
+    color: #f0efed; /* Base gold color */
+    text-shadow:
+      0 0 5px #FFD700,
+      0 0 10px #FFC300,
+      0 0 20px #FFB300,
+      0 0 30px #FFA000,
+      0 0 40px #FF8C00;
+}
+
+.menu {
+    display: flex;
+    justify-content: center; /* Przesuwa całe menu do prawej krawędzi */
+    align-items: center;      /* Wyrównuje elementy w pionie (jeśli to konieczne) */
+    padding: 0;
+    margin: 0;
+    background-color: #333333; /* Przeniesione tło tutaj, żeby pasek ciągnął się od prawej */
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Zmieniamy ul też na flex, aby pozbyć się floatów */
+}
+
+.menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    background-color: #111111;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0;
+    color: #f0efed; /* Base gold color */
+    text-shadow:
+      0 0 5px #FFD700,
+      0 0 10px #FFC300,
+      0 0 20px #FFB300,
+      0 0 30px #FFA000,
+      0 0 40px #FF8C00;
+}
+
+
+p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 0;
+    color: #f0efed; /* Base gold color */
+    text-shadow:
+      0 0 5px #FFD700,
+      0 0 10px #FFC300,
+      0 0 20px #FFB300,
+      0 0 30px #FFA000,
+      0 0 40px #FF8C00;
+}
+
+.zamowienia {
+    display: flex;
+    justify-content: center; /* Środkuje w poziomie */
+    align-items: center; 
+    min-height: 80vh;
+    padding: 40px 0;
+}
+
+/* From Uiverse.io by OliverZeros */ 
+button {
+  all: unset;
+}
+
+.header-button {
+    display: flex;
+    justify-content: center; /* Środkuje w poziomie */
+    align-items: center; 
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  height: 3.5rem;
+  align-items: center;
+  border-radius: 9999px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: Segoe UI;
+  font-size: 1.2rem;
+  font-weight: 640;
+  color: #fafaf6;
+  letter-spacing: -0.06em;
+  cursor: pointer;
+}
+
+.button-item {
+  background-color: transparent;
+  color: #1d1d1f;
+}
+
+.button-item .button-bg {
+  border-color: rgba(255, 208, 116);
+  background-color: rgba(255, 208, 116);
+}
+
+.button-inner,
+.button-inner-hover,
+.button-inner-static {
+  pointer-events: none;
+  display: block;
+}
+
+.button-inner {
+  position: relative;
+}
+
+.button-inner-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(70%);
+}
+
+.button-bg {
+  overflow: hidden;
+  border-radius: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: transform 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button-bg,
+.button-bg-layer,
+.button-bg-layers {
+  display: block;
+}
+
+.button-bg-layers {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -60%;
+  aspect-ratio: 1 / 1;
+  width: max(200%, 10rem);
+}
+
+.button-bg-layer {
+  border-radius: 9999px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+}
+
+.button-bg-layer.-purple {
+  background-color: rgba(163, 116, 255);
+}
+
+.button-bg-layer.-turquoise {
+  background-color: rgba(23, 241, 209);
+}
+
+.button-bg-layer.-yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 208, 116, var(--tw-bg-opacity));
+}
+
+.button:hover .button-inner-static {
+  opacity: 0;
+  transform: translateY(-70%);
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.3s linear;
+}
+
+.button:hover .button-inner-hover {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 1.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button:hover .button-bg-layer {
+  transition:
+    transform 1.3s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.3s linear;
+}
+
+.button:hover .button-bg-layer-1 {
+  transform: scale(1);
+}
+
+.button:hover .button-bg-layer-2 {
+  transition-delay: 0.1s;
+  transform: scale(1);
+}
+
+.button:hover .button-bg-layer-3 {
+  transition-delay: 0.2s;
+  transform: scale(1);
+}
+
+
+/* From Uiverse.io by alexruix */ 
+.form-box {
+  width: 100%;
+  max-width: 350px;
+  background: #f1f7fe;
+  overflow: hidden;
+  border-radius: 16px;
+  color: #010101;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px 24px;
+  gap: 16px;
+  text-align: center;
+}
+
+/*Form text*/
+.title {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
+/*Inputs box*/
+.form-container {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 1rem 0 .5rem;
+  width: 100%;
+}
+
+.input {
+  background: none;
+  border: 0;
+  outline: 0;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  font-size: .9rem;
+  padding: 8px 15px;
+}
+
+.form-section {
+  padding: 16px;
+  font-size: .85rem;
+  background-color: #e0ecfb;
+  box-shadow: rgb(0 0 0 / 8%) 0 -1px;
+}
+
+.form-section a {
+  font-weight: bold;
+  color: #0066ff;
+  transition: color .3s ease;
+}
+
+.form-section a:hover {
+  color: #005ce6;
+  text-decoration: underline;
+}
+
+/*Button*/
+.form button {
+  background-color: #0066ff;
+  color: #fff;
+  border: 0;
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.form button:hover {
+  background-color: #005ce6;
+}
+
+
+/* Główny kontener dla wszystkich bestsellerów */
+.bestsellers {
+  display: flex;
+  flex-direction: row;      /* Układa elementy obok siebie */
+  justify-content: center;  /* Środkuje produkty na stronie */
+  gap: 30px;                /* Tworzy równe odstępy między produktami */
+  flex-wrap: wrap;          /* W razie zbyt małego ekranu, produkty przejdą do nowej linii zamiast się psuć */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Styl dla nagłówka, żeby nie próbował wskoczyć w linię z produktami */
+.bestsellers h2 {
+  width: 100%;              /* Zmusza nagłówek do zajęcia całej szerokości na górze */
+  margin-bottom: 20px;
+}
+
+/* Twój obecny kod dla pojedynczego produktu (zostaje bez zmian) */
+.bestseller {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;                  /* Sprawia, że kolumny mają równą szerokość */
+  max-width: 300px;         /* Ogranicza maksymalną szerokość jednej kolumny */
+}
+
+/* Zmniejszyłem szerokość obrazka, żeby 3 sztuki zmieściły się obok siebie */
+.bestseller img {
+  width: 100%;              /* Obrazek dopasuje się do szerokości kontenera .bestseller */
+  height: auto;
+  border-radius: 8px;
+}
+
+
