@@ -1,0 +1,404 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+      background-color: #f7efef;
+    /* Nakładamy na siebie dwie warstwy: na górze liniowy gradient (od przezroczystego do brązu), a POD NIM Twoje zdjęcie kawy */
+    background-image: 
+        linear-gradient(to bottom, rgb(227, 222, 233) 0%, rgba(227, 221, 233, 0) 85%),
+        url("tlo1.jpg");
+
+    /* KLUCZ DO EFEKTU: Obrazek stoi sztywno w miejscu, a strona (teksty) przesuwa się nad nim */
+    background-attachment: scroll, fixed; 
+
+    /* Standardowe combo, żeby zdjęcie ładnie pokryło ekran i się nie powtarzało */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    /* Dajemy dużą wysokość strony, żebyś na pewno miał co scrollować i zobaczył efekt */
+    min-height: 150vh; 
+      font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+
+}
+
+.main {
+  margin-left: 200px;
+}
+
+.poczatek h1 {
+    font-size: 200px;
+    display: flex;
+    justify-content: center;
+    color: black;
+        text-transform: uppercase;
+        margin-top: 200px;
+        padding: 0;
+        -webkit-animation: text-pop-up-top 1.5s ease-in-out forwards;
+	        animation: text-pop-up-top 1.5s ease-in-out forwards;
+}
+
+.poczatek p {
+        font-size: 50px;
+    display: flex;
+    justify-content: center;
+    color: black;
+        text-transform: uppercase;
+        margin-bottom: 300px;
+        padding: 0;
+        -webkit-animation: text-pop-up-top 1.5s ease-in-out forwards;
+	        animation: text-pop-up-top 1.5s ease-in-out forwards;
+}
+
+
+@-webkit-keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 130px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+}
+
+.menu li a {
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.menu li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.menu li a:hover:not(.active) {
+  background-color: #555555;
+  color: white;
+}
+
+.h2-spis {
+    display: flex;
+    justify-content: center;
+    color: black;
+        text-transform: uppercase;
+        text-shadow:
+            0 0 5px rgb(132, 0, 255),
+            0 0 10px rgb(132, 0, 255),
+            0 0 20px rgb(132, 0, 255),
+            0 0 40px rgb(132, 0, 255),
+            0 0 80px rgb(132, 0, 255);
+        animation: flicker 1.5s infinite alternate;
+
+}
+
+.spis-tresci ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.spis-tresci li {
+    list-style-type: none;
+    color: #ff0b0b;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow:
+            0 0 5px rgb(132, 0, 255),
+            0 0 10px rgb(132, 0, 255),
+            0 0 20px rgb(132, 0, 255),
+            0 0 40px rgb(132, 0, 255),
+            0 0 80px rgb(132, 0, 255);
+        animation: flicker 1.5s infinite alternate;
+        margin-bottom: 10px;
+}
+
+.spis-tresci li a {
+    color: #e2dada;
+    display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+
+}
+
+.spis-tresci li a:hover:not(.active) {
+  background-color: #6d1ab1;
+  color: white;
+}
+
+#problemy h2 {
+display: flex;
+justify-content: center;
+color: black;
+        text-transform: uppercase;
+        margin-top: 200px;
+        padding: 0;
+        text-shadow:
+            0 0 5px rgb(132, 0, 255),
+            0 0 10px rgb(132, 0, 255),
+            0 0 20px rgb(132, 0, 255),
+            0 0 40px rgb(132, 0, 255),
+            0 0 80px rgb(132, 0, 255);
+        animation: flicker 1.5s infinite alternate;
+}
+
+mark {
+    background-color: rgba(104, 13, 207, 0.945);
+    color: white;
+    padding: 0.5em;
+}
+
+.main h2 {
+display: flex;
+justify-content: center;
+color: black;
+        text-transform: uppercase;
+        margin-top: 200px;
+        padding: 0;
+        text-shadow:
+            0 0 5px rgb(132, 0, 255),
+            0 0 10px rgb(132, 0, 255),
+            0 0 20px rgb(132, 0, 255),
+            0 0 40px rgb(132, 0, 255),
+            0 0 80px rgb(132, 0, 255);
+        animation: flicker 1.5s infinite alternate;
+}
+
+.main p {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.span {
+    background-color: rgba(207, 13, 13, 0.5);
+}
+
+span {
+    background-color: rgba(136, 13, 207, 0.5);
+}
+
+.dr {
+    display: flex;
+    justify-content: right;
+}
+
+summary {
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    text-shadow:
+            0 0 5px rgb(232, 255, 22),
+            0 0 10px rgb(232, 255, 22),
+            0 0 20px rgb(232, 255, 22),
+            0 0 40px rgb(232, 255, 22),
+            0 0 80px rgb(232, 255, 22);
+        animation: flicker 1.5s infinite alternate;
+}
+
+.sum {
+    background-color: rgba(136, 13, 207, 0.5);
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-image: linear-gradient(45deg, #330808, 
+  #3a2c09);
+  border-radius: 2.5em;
+  padding: 30px;
+  width: 300px;
+  height: 350px;
+}
+
+.form::before {
+  content: '';
+  background-image: linear-gradient(45deg, #ff0000, 
+  #ffb700);
+  height: 358px;
+  width: 309px;
+  position: absolute;
+  margin-top: -34px;
+  margin-left: px;
+  z-index: -1;
+  border-radius: 2.7em;
+}
+
+.button {
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  background: #ff5900;
+  color: black;
+  padding: 0.7em 5.5em;
+  display: flex;
+  align-items: center;
+  border: 2px solid #66da4300;
+  border-radius: 5em;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.button:hover {
+  border: 2px solid #ff5900;
+  background: #00000000;
+  color: #ff5900;
+}
+
+.button:active {
+  border: 2px solid #66da4300;
+  background: #ff5900;
+  color: black;
+}
+
+.input {
+  width: calc(100% - 10px);
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #66da4300;
+  border-bottom: 1px solid #ff5900;
+  outline: none;
+  background-color: transparent;
+  color: #ff5900;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.2s;
+}
+
+.input:focus {
+  border: 1px solid #66da4300;
+  border-bottom: 1px solid #ff5900;
+  background-color: transparent;
+  color: white;
+}
+
+.input::placeholder {
+  color: #9b725b;
+}
+
+.textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  width: calc(100% - 10px);
+  padding: 8px;
+  height: 100px;
+  margin-bottom: 20px;
+  border: 1px solid #66da4300;
+  border-bottom: 1px solid #ff5900;
+  outline: none;
+  background-color: transparent;
+  color: #ff5900;
+}
+
+.textarea::placeholder {
+  color: #9b725b;
+}
+
+.textarea:focus {
+  border: 1px solid #66da4300;
+  border-bottom: 1px solid #ff5900;
+  background-color: transparent;
+  color: white;
+}
+
+.rowno {
+display: flex;
+justify-content: center;
+color: black;
+        text-transform: uppercase;
+        margin-top: 200px;
+        padding: 0;
+        text-shadow:
+            0 0 5px rgb(132, 0, 255),
+            0 0 10px rgb(132, 0, 255),
+            0 0 20px rgb(132, 0, 255),
+            0 0 40px rgb(132, 0, 255),
+            0 0 80px rgb(132, 0, 255);
+        animation: flicker 1.5s infinite alternate;
+
+}
+
+.mapy {
+    display: flex;
+    justify-content: center;
+    width: 100%;         /* Kontener zajmuje całą dostępną szerokość sekcji */
+    max-width: 800px;    /* Opcjonalnie: maksymalna szerokość mapy, żeby nie była za ogromna */
+    margin: 20px auto;   /* Centruje kontener i daje odstęp od góry/dołu */
+}
+
+.mapy iframe {
+    width: 100%;         /* Teraz bezpiecznie zajmie 100% szerokości kontenera .mapy */
+    height: 450px;       /* Ważne: iframe MUSI mieć podaną wysokość (np. w px), inaczej będzie bardzo niski */
+    border: 0;           /* Usuwa domyślne obramowanie */
+}
+
+.adres {
+    display: flex;
+    justify-content: center;
+    margin-right: 200px;
+}
+
+.centrowanie {
+    display: flex;
+    justify-content: center;
+    margin-right: 200px;
+}
+
+.footer {
+    display: flex;
+justify-content: center;
+color: rgba(194, 191, 191, 0.699);
+background-color: rgba(0, 4, 22, 0.699);
+        text-transform: uppercase;
+        margin-top: 200px;
+        padding: 0;
+        animation: flicker 1.5s infinite alternate;
+}
