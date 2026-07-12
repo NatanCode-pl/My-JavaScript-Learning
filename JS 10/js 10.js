@@ -8,9 +8,9 @@ const warehouseStatus = document.querySelector('#warehouse-status');
 
 let magazyn = ["Paczka Gabaryt", "Paczka Standard"];
 
-// PRZYCISK 1: Przyjęcie paczki
+
 addBoxBtn.addEventListener("click", function() {
-    let kodPriorytetowy = priorityCode.value.toUpperCase(); // .toUpperCase() zamieni małe "a" na duże "A"
+    let kodPriorytetowy = priorityCode.value.toUpperCase(); 
 
     if (kodPriorytetowy === "") {
         return;
@@ -20,11 +20,11 @@ addBoxBtn.addEventListener("click", function() {
 
     let nazwaDzialu = "";
         
-    // PERFEKCYJNY SWITCH:
+    
     switch (kodPriorytetowy) {
         case "A":
             nazwaDzialu = "Dział Ekspres";
-            break; // Odcinamy, komputer nie czyta dalej
+            break; 
         case "B":
             nazwaDzialu = "Dział Krajowy";
             break;
@@ -39,12 +39,12 @@ addBoxBtn.addEventListener("click", function() {
     console.log("działa switch!");
 
     magazyn.push(nazwaDzialu);
-    priorityCode.value = ""; // Poprawne czyszczenie okienka na stronie!
+    priorityCode.value = ""; 
 
     warehouseStatus.innerHTML = "Przyjęto nową paczkę";
 
     boxesContainer.innerHTML = "";
-    // Pętla z .length oraz +=
+    
     for (let i = 0; i < magazyn.length; i++) {
         let nazwaZTablicy = magazyn[i];
         boxesContainer.innerHTML += "<div class='box-item'>📦 " + nazwaZTablicy + "</div>";
@@ -52,11 +52,11 @@ addBoxBtn.addEventListener("click", function() {
     console.log("działa for!");
 });
 
-// PRZYCISK 2: Wydanie paczki
+
 dispatchBoxBtn.addEventListener("click", function() {
     if (magazyn.length === 0) {
         warehouseStatus.innerHTML = "Brak paczek do wydania!";
-        return; // Zatrzymujemy funkcję, żeby nie robić .pop() na pustej tablicy
+        return; 
     } else {
         magazyn.pop();
         warehouseStatus.innerHTML = "Wydano paczkę kurierowi!";
@@ -64,7 +64,7 @@ dispatchBoxBtn.addEventListener("click", function() {
     console.log("działa if 2!");
 
     boxesContainer.innerHTML = "";
-    // Pętla z .length oraz +=
+    
     for (let i = 0; i < magazyn.length; i++) {
         let nazwaZTablicy = magazyn[i];
         boxesContainer.innerHTML += "<div class='box-item'>📦 " + nazwaZTablicy + "</div>";
