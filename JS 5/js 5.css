@@ -18,14 +18,14 @@ button { cursor: pointer; padding: 10px; background: #28a745; color: white; bord
 .status-box { background: #222; padding: 10px; border-radius: 5px; margin-bottom: 20px; text-align: center; }
 #game-status { font-weight: bold; color: #ffc107; }
 
-/* Kontener na paski HP */
+
 .health-bar {
   display: flex;
   gap: 5px;
   min-height: 30px;
 }
 
-/* Klasa dla pojedynczego klocka HP, który stworzysz w JS */
+
 .hp-block {
   width: 30px;
   height: 30px;
