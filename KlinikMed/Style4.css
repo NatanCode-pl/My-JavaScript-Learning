@@ -4,20 +4,20 @@
 
 body {
       background-color: #f7efef;
-    /* Nakładamy na siebie dwie warstwy: na górze liniowy gradient (od przezroczystego do brązu), a POD NIM Twoje zdjęcie kawy */
+    
     background-image: 
         linear-gradient(to bottom, rgb(227, 222, 233) 0%, rgba(227, 221, 233, 0) 85%),
         url("tlo1.jpg");
 
-    /* KLUCZ DO EFEKTU: Obrazek stoi sztywno w miejscu, a strona (teksty) przesuwa się nad nim */
+    
     background-attachment: scroll, fixed; 
 
-    /* Standardowe combo, żeby zdjęcie ładnie pokryło ekran i się nie powtarzało */
+    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     
-    /* Dajemy dużą wysokość strony, żebyś na pewno miał co scrollować i zobaczył efekt */
+    
     min-height: 150vh; 
       font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -369,15 +369,15 @@ color: black;
 .mapy {
     display: flex;
     justify-content: center;
-    width: 100%;         /* Kontener zajmuje całą dostępną szerokość sekcji */
-    max-width: 800px;    /* Opcjonalnie: maksymalna szerokość mapy, żeby nie była za ogromna */
-    margin: 20px auto;   /* Centruje kontener i daje odstęp od góry/dołu */
+    width: 100%;         
+    max-width: 800px;    
+    margin: 20px auto;   
 }
 
 .mapy iframe {
-    width: 100%;         /* Teraz bezpiecznie zajmie 100% szerokości kontenera .mapy */
-    height: 450px;       /* Ważne: iframe MUSI mieć podaną wysokość (np. w px), inaczej będzie bardzo niski */
-    border: 0;           /* Usuwa domyślne obramowanie */
+    width: 100%;         
+    height: 450px;       
+    border: 0;           
 }
 
 .adres {
