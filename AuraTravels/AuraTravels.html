@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auratravels - Travel the world</title>
+    <link rel="stylesheet" href="AuraTravels.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DynaPuff:wght@400..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<link rel="icon" href="icon.webp" type="image/x-icon">
+</head>
+<body>
+ <header class="hero-header">
+    <div class="hero-overlay">
+        <div class="header-container">
+            <h1>Auratravels</h1> 
+            <h2>Explore the Unexplored</h2> 
+        </div>
+        <div class="header-button">
+            <button class="button button-item">
+                <span class="button-bg">
+                    <span class="button-bg-layers">
+                        <span class="button-bg-layer button-bg-layer-1 -purple"></span>
+                        <span class="button-bg-layer button-bg-layer-2 -turquoise"></span>
+                        <span class="button-bg-layer button-bg-layer-3 -yellow"></span>
+                    </span>
+                </span>
+                <span class="button-inner">
+                    <span class="button-inner-static">Find your next adventure</span>
+                    <span class="button-inner-hover">Find your next adventure</span>
+                </span>
+            </button>
+        </div>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#destinations" class="nav-link1">Destinations</a></li>
+            <li><a href="#calc" class="nav-link2">Price Calculator</a></li>
+            <li><a href="#booking" class="nav-link3">Book your Vacations!</a></li>
+            <li><a href="#contact" class="nav-link4">Contact</a></li>
+            <li><a href="#about-us" class="nav-link5">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+    <main>
+        <section id="destinations">
+            <h2>Destinations</h2>
+            <p><b>Most popular destinations</b></p>
+            <div class="carousel-wrapper">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            
+            <!-- Slajd 1 -->
+            <div class="swiper-slide">
+                <img src="Maldives.jpg" alt="Foto 1">
+                <div class="slide-title">Maldives<br>7 nights<br>4000$</div>
+            </div>
+            
+            <!-- Slajd 2 -->
+            <div class="swiper-slide">
+                <img src="France.jpg" alt="Foto 2">
+                <div class="slide-title">France<br>14 nights<br>500$</div>
+            </div>
+            
+            <!-- Slajd 3 -->
+            <div class="swiper-slide">
+                <img src="Peru.jpg" alt="Foto 3">
+                <div class="slide-title">Peru<br>5 nights<br>1000$</div>
+            </div>
+
+            <!-- Slajd 4 -->
+            <div class="swiper-slide">
+                <img src="SouthAfrica.jpg" alt="Foto 4">
+                <div class="slide-title">South Africa<br>10 nights<br>3500$</div>
+            </div>
+
+            <!-- Slajd 5 -->
+            <div class="swiper-slide">
+                <img src="Japan.jpg" alt="Foto 5">
+                <div class="slide-title">Japan<br>20 nights<br>5500$</div>
+            </div>
+        </div>
+
+        <!-- Strzałki nawigacyjne z Twojego rysunku -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+</section>
+
+<section id="calc" class="calc-section">
+    <div class="calc-container">
+        <h2>Price Calculator</h2>
+        <h3>Calculate the cost of your dream trip!</h3>
+        
+        <form id="travel-form">
+            <div class="form-group">
+                <label for="destination">Destination</label>
+                <select name="destination" id="destination">
+                    <option value="Maldives" id="destination-Maldives">Maldives</option>
+                    <option value="France" id="destination-France">France</option>
+                    <option value="Peru" id="destination-Peru">Peru</option>
+                    <option value="SouthAfrica" id="destination-SouthAfrica">South Africa</option>
+                    <option value="Japan" id="destination-Japan">Japan</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nights">Number of nights</label>
+                    <input type="number" name="nights" id="nights" min="1" max="30" value="1">
+                </div>
+                
+                <div class="form-group">
+                    <label for="participants">How many participants?</label>
+                    <input type="number" name="participants" id="participants" min="1" max="10" value="1">
+                </div>
+            </div>
+
+            <div class="form-group checkbox-group">
+    <label class="custom-checkbox">
+        <input type="checkbox" id="premium-guide" checked="checked" />
+        <span class="checkmark"></span>
+        <span class="checkbox-text">Include Premium All-Inclusive Guide</span>
+    </label>
+</div>
+
+            <button type="button" class="calc-btn">
+                Calculate Price
+                <div class="star-1"><svg viewBox="0 0 784.11 815.53"><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></svg></div>
+                <div class="star-2"><svg viewBox="0 0 784.11 815.53"><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></svg></div>
+                <div class="star-3"><svg viewBox="0 0 784.11 815.53"><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></svg></div>
+                <div class="star-4"><svg viewBox="0 0 784.11 815.53"><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></svg></div>
+                <div class="star-5"><svg viewBox="0 0 784.11 815.53"><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></svg></div>
+                <div class="star-6"><svg viewBox="0 0 784.11 815.53"><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></svg></div>
+            </button>
+            
+            <div class="price-summary">
+                <span class="summary-label">Total estimated price:</span>
+                <div id="result-display" class="price-amount">$0.00</div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section id="booking" class="calc-section">
+    <div class="calc-container">
+        <h2>Book your Vacations!</h2>
+        <h3>Fill out the form to reserve your spot instantly.</h3>
+        
+        <form id="booking-form">
+            <div class="form-group">
+                <label for="book-destination">Destination</label>
+                <select name="destination" id="book-destination">
+                    <option value="Maldives">Maldives</option>
+                    <option value="France">France</option>
+                    <option value="Peru">Peru</option>
+                    <option value="SouthAfrica">South Africa</option>
+                    <option value="Japan">Japan</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="book-nights">Number of nights</label>
+                    <input type="number" name="nights" id="book-nights" min="1" max="30" value="1">
+                </div>
+                
+                <div class="form-group">
+                    <label for="book-participants">How many participants?</label>
+                    <input type="number" name="participants" id="book-participants" min="1" max="10" value="1">
+                </div>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="book-premium-guide" checked="checked" />
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">Include Premium All-Inclusive Guide</span>
+                </label>
+            </div>
+
+            <button type="submit" class="calc-btn">
+                BOOK NOW
+                <div class="star-1"><svg viewBox="0 0 784.11 815.53"><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></svg></div>
+                <div class="star-2"><svg viewBox="0 0 784.11 815.53"><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></svg></div>
+                <div class="star-3"><svg viewBox="0 0 784.11 815.53"><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></svg></div>
+                <div class="star-4"><svg viewBox="0 0 784.11 815.53"><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></svg></div>
+                <div class="star-5"><svg viewBox="0 0 784.11 815.53"><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></svg></div>
+                <div class="star-6"><svg viewBox="0 0 784.11 815.53"><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path></svg></div>
+            </button>
+        </form>
+    </div>
+</section>
+
+<section id="Contact" class="calc-section">
+<!-- From Uiverse.io by gharsh11032000 --> 
+<div class="form-container">
+      <form class="form">
+        <p><b>Fill out the form below to get in touch with us.</b></p>
+        <div class="form-group">
+          <label for="email">Company Email</label>
+          <input type="text" id="email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="textarea">How Can We Help You?</label>
+          <textarea name="textarea" id="textarea" rows="10" cols="50" required=""></textarea>
+        </div>
+        <button class="form-submit-btn" type="submit">Submit</button>
+      </form>
+    </div>
+
+</section>
+</main>
+<footer>
+    <p>&copy; 2026 AuraTravels. All rights reserved.</p>
+    <ul>
+        <li><a href="About-us.html">About Us</a></li>
+        <li><a href="Terms-of-service.html">Terms of Service</a></li>
+        <li><a href="Terms-of-use.html">Terms of Use</a></li>
+        <li><a href="Privacy-policy.html">Privacy Policy</a></li>
+    </ul>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="AuraTravels.js" defer></script>
+</body>
+</html>

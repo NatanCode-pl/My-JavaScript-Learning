@@ -1,0 +1,1078 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  background: #E0EAFC;
+  background: linear-gradient(
+    to right,
+    #E0EAFC,#CFDEF3
+  );
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+button {
+  all: unset;
+}
+
+.header-button {
+    display: flex;
+    justify-content: center; /* Środkuje w poziomie */
+    align-items: center; 
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  height: 3.5rem;
+  align-items: center;
+  border-radius: 9999px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: Segoe UI;
+  font-size: 1.2rem;
+  font-weight: 640;
+  color: #fafaf6;
+  letter-spacing: -0.06em;
+  cursor: pointer;
+}
+
+.button-item {
+  background-color: transparent;
+  color: #1d1d1f;
+}
+
+.button-item .button-bg {
+  border-color: rgba(255, 208, 116);
+  background-color: rgba(255, 208, 116);
+}
+
+.button-inner,
+.button-inner-hover,
+.button-inner-static {
+  pointer-events: none;
+  display: block;
+}
+
+.button-inner {
+  position: relative;
+}
+
+.button-inner-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(70%);
+}
+
+.button-bg {
+  overflow: hidden;
+  border-radius: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: transform 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button-bg,
+.button-bg-layer,
+.button-bg-layers {
+  display: block;
+}
+
+.button-bg-layers {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -60%;
+  aspect-ratio: 1 / 1;
+  width: max(200%, 10rem);
+}
+
+.button-bg-layer {
+  border-radius: 9999px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+}
+
+.button-bg-layer.-purple {
+  background-color: rgba(163, 116, 255);
+}
+
+.button-bg-layer.-turquoise {
+  background-color: rgba(23, 241, 209);
+}
+
+.button-bg-layer.-yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 208, 116, var(--tw-bg-opacity));
+}
+
+.button:hover .button-inner-static {
+  opacity: 0;
+  transform: translateY(-70%);
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.3s linear;
+}
+
+.button:hover .button-inner-hover {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 1.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button:hover .button-bg-layer {
+  transition:
+    transform 1.3s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.3s linear;
+}
+
+.button:hover .button-bg-layer-1 {
+  transform: scale(1);
+}
+
+.button:hover .button-bg-layer-2 {
+  transition-delay: 0.1s;
+  transform: scale(1);
+}
+
+.button:hover .button-bg-layer-3 {
+  transition-delay: 0.2s;
+  transform: scale(1);
+}
+
+.carousel-wrapper {
+    background-color: transparent;
+    padding: 40px 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+    perspective: 1200px; 
+}
+
+/* TUTAJ JEST ZMIANA: 
+   Ograniczamy szerokość całej karuzeli i środkujemy ją na stronie
+*/
+.swiper {
+    width: 100%;
+    max-width: 900px; /* Cały blok karuzeli będzie miał max 900px szerokości */
+    margin: 0 auto;   /* Idealne wyśrodkowanie na ekranie */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;  /* Szerokość pojedynczego slajdu-prostokąta */
+    height: 420px; /* Wysokość pojedynczego slajdu-prostokąta */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Podpis na zdjęciu */
+.slide-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    z-index: 2;
+}
+
+/* Strzałki umieszczone po bokach naszego wyśrodkowanego kontenera */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #00d2ff !important;
+    transform: scale(0.8);
+    z-index: 10;
+}
+/* From Uiverse.io by byllzz */ 
+/*checkbox container */
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 25px;
+  user-select: none;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: #fdfcf0;
+  border: 4px solid #1a1a1a;
+  border-radius: 8% 92% 12% 88% / 87% 11% 89% 13%;
+  box-shadow: 5px 5px 0px #1a1a1a;
+  transition:
+    transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.2s;
+}
+
+.container:hover .checkmark {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #ff5722;
+  border-radius: 92% 8% 88% 12% / 11% 87% 13% 89%;
+  transform: scale(1.1) rotate(-2deg);
+}
+
+.container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 0.36em;
+  top: 0.09em;
+  width: 0.3em;
+  transform: translate(-50%, -50%) rotate(40deg);
+  height: 0.7em;
+  border: solid #1a1a1a;
+  border-width: 0 0.25em 0.25em 0;
+  border-radius: 2px;
+}
+
+/* cheked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+  animation: splash 0.3s forwards;
+}
+
+.container:active .checkmark {
+  transform: scale(0.9) translateY(4px);
+  box-shadow: 0px 0px 0px #1a1a1a;
+}
+
+@keyframes splash {
+  0% {
+    transform: scale(0) rotate(40deg);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2) rotate(40deg);
+  }
+  100% {
+    transform: scale(1) rotate(40deg);
+    opacity: 1;
+  }
+}
+
+/* From Uiverse.io by MuhammadHasann */ 
+button {
+  position: relative;
+  padding: 12px 35px;
+  background: #fec195;
+  font-size: 17px;
+  font-weight: 500;
+  color: #181818;
+  border: 3px solid #fec195;
+  border-radius: 8px;
+  box-shadow: 0 0 0 #fec1958c;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.star-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s ease;
+}
+
+button:hover {
+  background: transparent;
+  color: #fec195;
+  box-shadow: 0 0 25px #fec1958c;
+}
+
+button:hover .star-1 {
+  position: absolute;
+  top: -80%;
+  left: -30%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-2 {
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-3 {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-5 {
+  position: absolute;
+  top: 25%;
+  left: 115%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-6 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.fil0 {
+  fill: #fffdef;
+}
+
+/* From Uiverse.io by gharsh11032000 */ 
+.button {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 18px;
+  color: rgb(193, 163, 98);
+  border: 2px solid rgb(193, 163, 98);
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: rgb(193, 163, 98);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button:hover::before {
+  scale: 3;
+}
+
+.button:hover {
+  color: #212121;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+}
+
+.button:active {
+  scale: 1;
+}
+
+
+/* From Uiverse.io by gharsh11032000 */ 
+.form-container {
+  width: 400px;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #717171;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-container .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #717171;
+  font-weight: 600;
+  width: 40%;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-left: 85px;
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 200px;
+     -webkit-animation: text-pop-up-top 1.5s ease-in-out forwards;
+	        animation: text-pop-up-top 1.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+.header-container h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+       -webkit-animation: text-pop-up-top 1.5s ease-in-out forwards;
+	        animation: text-pop-up-top 1.5s ease-in-out forwards;
+}
+
+
+@-webkit-keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Styl dla całego nagłówka z obrazkiem w tle */
+.hero-header {
+    position: relative;
+    width: 100%;
+    min-height: 80vh; /* Zajmuje 80% wysokości ekranu (możesz zmienić na 100vh dla pełnego ekranu) */
+    background-image: url('beach.webp');
+    background-size: cover; /* Rozciąga obrazek na całą szerokość i wysokość */
+    background-position: center; /* Centruje obrazek */
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Sprawia, że nawigacja ląduje na dole nagłówka */
+}
+
+/* Opcjonalna ciemna nakładka, aby białe napisy były lepiej widoczne na tle plaży */
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.3); /* Lekkie przyciemnienie tła */
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Środkuje napisy i przycisk w pionie */
+    align-items: center; /* Środkuje w poziomie */
+    padding: 40px 20px;
+}
+
+/* Poprawka dla kontenera z napisami */
+.header-container {
+    text-align: center;
+    color: white; /* Zmiana koloru tekstów na biały, by były widoczne */
+}
+
+/* Wyśrodkowanie przycisku */
+.header-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Usunięcie błędu literówki (allign-items) z Twojego kodu i poprawne stylowanie */
+h1 {
+    display: block;
+    text-align: center;
+    font-size: 80px; /* Zmniejszono z 200px, żeby tekst mieścił się na ekranach */
+    color: white;
+    margin: 0;
+    animation: text-pop-up-top 1.5s ease-in-out forwards;
+}
+
+.header-container h2 {
+    display: block;
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    margin-top: 10px;
+    animation: text-pop-up-top 1.5s ease-in-out forwards;
+}
+
+/* Pasek nawigacji na dole obrazka */
+nav {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Półprzezroczyste tło menu */
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00d2ff;
+}
+
+/* Styl dla głównego nagłówka "Destinations" */
+#destinations h2 {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 10px; /* Zmniejszamy odstęp na dole, by podtytuł był bliżej */
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif; /* Elegancki, szeryfowy font w stylu "premium" */
+    color: #1a202c; /* Głęboki, elegancki grafit zamiast zwykłej czerni */
+    letter-spacing: 1px;
+}
+
+/* Styl dla podtytułu "Most popular destinations" */
+#destinations p b {
+    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase; /* Zmiana liter na wielkie */
+    letter-spacing: 3px;       /* Modne, szerokie rozstrzelenie liter */
+    color: #00d2ff;            /* Twój flagowy, błękitny kolor dla ożywienia sekcji */
+    font-weight: 600;
+    margin-bottom: 40px;       /* Odstęp od karuzeli ze zdjęciami */
+}
+/* Sekcja i tło */
+.calc-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #111b24 0%, #080c10 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+/* Kontener Formularza */
+.calc-container {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 40px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.calc-container h2 {
+    color: #00d2ff;
+    font-size: 2rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.calc-container h3 {
+    color: #a0aec0;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+/* Układ pól tekstowych i liczbowych */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* KLUCZ: Identyczny, pogrubiony styl dla Selecta oraz Inputów */
+select, 
+input[type="number"] {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 16px 18px; /* Zwiększony padding - pola są teraz grubsze i masywniejsze */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-appearance: none; /* Reset domyślnego wyglądu systemowego */
+    appearance: none;
+}
+
+/* Kolory opcji po rozwinięciu listy */
+select option {
+    background-color: #111b24;
+    color: #fff;
+    padding: 12px;
+}
+
+select:focus, 
+input[type="number"]:focus {
+    border-color: #00d2ff;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.25);
+    background: #111b24;
+}
+
+/* Kontener grupy checkboxa */
+.checkbox-group {
+    margin: 32px 0;
+    width: 100%;
+}
+
+/* Główna etykieta jako stabilny siatka (Grid) */
+.custom-checkbox {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Pierwsza kolumna na kwadrat, druga na tekst */
+    align-items: center;             /* Idealne wyrównanie w pionie */
+    gap: 14px;                       /* Sztywny odstęp między kwadratem a tekstem */
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+}
+
+/* Ukrycie natywnego checkboxa */
+.custom-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Nowy, niezależny kwadracik */
+.checkmark {
+    width: 24px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    box-sizing: border-box;
+}
+
+/* Hover na cały element podświetla kwadrat */
+.custom-checkbox:hover input[type="checkbox"] ~ .checkmark {
+    border-color: #00d2ff;
+}
+
+/* Stan zaznaczony - tło i ptaszek SVG */
+.custom-checkbox input[type="checkbox"]:checked ~ .checkmark {
+    background-color: #00d2ff;
+    border-color: #00d2ff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23080c10' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+/* Styl tekstu - blokada łamania */
+.checkbox-text {
+    color: #cbd5e1;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap; /* KLUCZ: zakazuje przeglądarce łamania tekstu do nowej linii */
+}
+
+/* Magiczny Przycisk Obliczeń */
+.calc-btn {
+    position: relative;
+    width: 100%;
+    background: #00d2ff;
+    color: #080c10;
+    border: none;
+    border-radius: 14px;
+    padding: 18px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 25px rgba(0, 210, 255, 0.3);
+}
+
+.calc-btn:hover {
+    background: #26e0ff;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 210, 255, 0.5);
+}
+
+.calc-btn:active {
+    transform: translateY(1px);
+}
+
+.calc-btn svg {
+    position: absolute;
+    fill: rgba(8, 12, 16, 0.4);
+    pointer-events: none;
+    transition: all 0.5s;
+}
+
+.star-1 svg { top: 10%; left: 10%; width: 15px; }
+.star-2 svg { top: 70%; left: 85%; width: 18px; }
+.star-3 svg { top: 40%; left: 90%; width: 12px; }
+
+.calc-btn:hover svg {
+    transform: scale(1.3) rotate(15deg);
+    fill: rgba(8, 12, 16, 0.8);
+}
+
+/* Sekcja Wyniku */
+.price-summary {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.summary-label {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.price-amount {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    letter-spacing: -1px;
+}
+
+.calc-btn {
+    display: block !important;
+    width: max-content !important; /* Przycisk zwęzi się idealnie do szerokości tekstu */
+    padding: 18px 40px !important; /* Doda ładne odstępy po bokach tekstu */
+    margin: 0 auto !important;     /* Wyśrodkuje zwężony przycisk */
+}
+
+#Contact {
+    display: flex;
+    justify-content: center;
+}
+
+.form p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #a0aec0;
+}
+
+/* Styling dla całej stopki */
+footer {
+    background: #0b1117; /* Bardzo ciemny, elegancki granat pasujący do sekcji kalkulatora */
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Delikatna linia oddzielająca na górze */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Tekst z prawami autorskimi */
+footer p {
+    color: #718096; /* Stonowany, szary kolor tekstowy */
+    font-size: 0.95rem;
+    margin-bottom: 20px; /* Odstęp między tekstem a linkami */
+}
+
+/* Kontener na listę linków */
+footer ul {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie linków w poziomie */
+    flex-wrap: wrap;         /* Pozwala linkom przejść do nowej linii na telefonach */
+    list-style: none;        /* Całkowite usunięcie czarnych kropek z listy */
+    padding: 0;
+    margin: 0;
+    gap: 30px;               /* Elegancki, równy odstęp między linkami */
+}
+
+/* Wygląd samych linków */
+footer ul li a {
+    color: #a0aec0;          /* Przyjemny dla oka, jasnoszary kolor */
+    text-decoration: none;   /* Usunięcie domyślnego podkreślenia */
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease; /* Płynne przejście koloru po najechaniu */
+}
+
+/* Efekt po najechaniu myszką na link w stopce */
+footer ul li a:hover {
+    color: #00d2ff;          /* Zmiana koloru na ten sam błękit, który masz w przyciskach */
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5); /* Delikatna błękitna poświata */
+}
