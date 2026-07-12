@@ -23,7 +23,7 @@ button {
 
 .header-button {
     display: flex;
-    justify-content: center; /* Środkuje w poziomie */
+    justify-content: center; 
     align-items: center; 
     margin-bottom: 40px;
     margin-top: 40px;
@@ -168,13 +168,11 @@ button {
     perspective: 1200px; 
 }
 
-/* TUTAJ JEST ZMIANA: 
-   Ograniczamy szerokość całej karuzeli i środkujemy ją na stronie
-*/
+
 .swiper {
     width: 100%;
-    max-width: 900px; /* Cały blok karuzeli będzie miał max 900px szerokości */
-    margin: 0 auto;   /* Idealne wyśrodkowanie na ekranie */
+    max-width: 900px; 
+    margin: 0 auto;   
     padding-top: 50px;
     padding-bottom: 50px;
     position: relative;
@@ -183,8 +181,8 @@ button {
 .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 300px;  /* Szerokość pojedynczego slajdu-prostokąta */
-    height: 420px; /* Wysokość pojedynczego slajdu-prostokąta */
+    width: 300px;  
+    height: 420px; 
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
@@ -198,7 +196,7 @@ button {
     object-fit: cover;
 }
 
-/* Podpis na zdjęciu */
+
 .slide-title {
     position: absolute;
     bottom: 20px;
@@ -210,15 +208,14 @@ button {
     z-index: 2;
 }
 
-/* Strzałki umieszczone po bokach naszego wyśrodkowanego kontenera */
+
 .swiper-button-prev,
 .swiper-button-next {
     color: #00d2ff !important;
     transform: scale(0.8);
     z-index: 10;
 }
-/* From Uiverse.io by byllzz */ 
-/*checkbox container */
+
 .container {
   display: block;
   position: relative;
@@ -274,7 +271,7 @@ button {
   border-radius: 2px;
 }
 
-/* cheked */
+
 .container input:checked ~ .checkmark:after {
   display: block;
   animation: splash 0.3s forwards;
@@ -299,7 +296,7 @@ button {
   }
 }
 
-/* From Uiverse.io by MuhammadHasann */ 
+ 
 button {
   position: relative;
   padding: 12px 35px;
@@ -450,7 +447,7 @@ button:hover .star-6 {
   fill: #fffdef;
 }
 
-/* From Uiverse.io by gharsh11032000 */ 
+ 
 .button {
   cursor: pointer;
   position: relative;
@@ -494,7 +491,7 @@ button:hover .star-6 {
 }
 
 
-/* From Uiverse.io by gharsh11032000 */ 
+ 
 .form-container {
   width: 400px;
   background: linear-gradient(#212121, #212121) padding-box,
@@ -682,39 +679,39 @@ h1 {
   }
 }
 
-/* Styl dla całego nagłówka z obrazkiem w tle */
+
 .hero-header {
     position: relative;
     width: 100%;
-    min-height: 80vh; /* Zajmuje 80% wysokości ekranu (możesz zmienić na 100vh dla pełnego ekranu) */
+    min-height: 80vh; 
     background-image: url('beach.webp');
-    background-size: cover; /* Rozciąga obrazek na całą szerokość i wysokość */
-    background-position: center; /* Centruje obrazek */
+    background-size: cover; 
+    background-position: center; 
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Sprawia, że nawigacja ląduje na dole nagłówka */
+    justify-content: space-between; 
 }
 
-/* Opcjonalna ciemna nakładka, aby białe napisy były lepiej widoczne na tle plaży */
+
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.3); /* Lekkie przyciemnienie tła */
+    background: rgba(0, 0, 0, 0.3); 
     width: 100%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Środkuje napisy i przycisk w pionie */
-    align-items: center; /* Środkuje w poziomie */
+    justify-content: center; 
+    align-items: center; 
     padding: 40px 20px;
 }
 
-/* Poprawka dla kontenera z napisami */
+
 .header-container {
     text-align: center;
-    color: white; /* Zmiana koloru tekstów na biały, by były widoczne */
+    color: white; 
 }
 
-/* Wyśrodkowanie przycisku */
+
 .header-button {
     display: flex;
     justify-content: center;
@@ -722,11 +719,11 @@ h1 {
     margin-top: 20px;
 }
 
-/* Usunięcie błędu literówki (allign-items) z Twojego kodu i poprawne stylowanie */
+
 h1 {
     display: block;
     text-align: center;
-    font-size: 80px; /* Zmniejszono z 200px, żeby tekst mieścił się na ekranach */
+    font-size: 80px; 
     color: white;
     margin: 0;
     animation: text-pop-up-top 1.5s ease-in-out forwards;
@@ -741,10 +738,10 @@ h1 {
     animation: text-pop-up-top 1.5s ease-in-out forwards;
 }
 
-/* Pasek nawigacji na dole obrazka */
+
 nav {
     width: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Półprzezroczyste tło menu */
+    background: rgba(0, 0, 0, 0.7); 
     padding: 15px 0;
 }
 
@@ -769,31 +766,31 @@ nav ul li a:hover {
     color: #00d2ff;
 }
 
-/* Styl dla głównego nagłówka "Destinations" */
+/
 #destinations h2 {
     text-align: center;
     margin-top: 80px;
-    margin-bottom: 10px; /* Zmniejszamy odstęp na dole, by podtytuł był bliżej */
+    margin-bottom: 10px;
     font-size: 3.5rem;
     font-weight: 700;
-    font-family: 'Playfair Display', serif; /* Elegancki, szeryfowy font w stylu "premium" */
-    color: #1a202c; /* Głęboki, elegancki grafit zamiast zwykłej czerni */
+    font-family: 'Playfair Display', serif; 
+    color: #1a202c; 
     letter-spacing: 1px;
 }
 
-/* Styl dla podtytułu "Most popular destinations" */
+
 #destinations p b {
     display: block;
     text-align: center;
     font-size: 1.1rem;
     font-family: 'Roboto', sans-serif;
-    text-transform: uppercase; /* Zmiana liter na wielkie */
-    letter-spacing: 3px;       /* Modne, szerokie rozstrzelenie liter */
-    color: #00d2ff;            /* Twój flagowy, błękitny kolor dla ożywienia sekcji */
+    text-transform: uppercase; 
+    letter-spacing: 3px;       
+    color: #00d2ff;            
     font-weight: 600;
-    margin-bottom: 40px;       /* Odstęp od karuzeli ze zdjęciami */
+    margin-bottom: 40px;       
 }
-/* Sekcja i tło */
+
 .calc-section {
     padding: 80px 20px;
     background: linear-gradient(135deg, #111b24 0%, #080c10 100%);
@@ -802,7 +799,7 @@ nav ul li a:hover {
     justify-content: center;
 }
 
-/* Kontener Formularza */
+
 .calc-container {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -829,7 +826,7 @@ nav ul li a:hover {
     margin-bottom: 35px;
 }
 
-/* Układ pól tekstowych i liczbowych */
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -855,13 +852,13 @@ label {
     letter-spacing: 0.5px;
 }
 
-/* KLUCZ: Identyczny, pogrubiony styl dla Selecta oraz Inputów */
+
 select, 
 input[type="number"] {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 12px;
-    padding: 16px 18px; /* Zwiększony padding - pola są teraz grubsze i masywniejsze */
+    padding: 16px 18px; 
     color: #fff;
     font-size: 1rem;
     font-weight: 500;
@@ -870,11 +867,11 @@ input[type="number"] {
     width: 100%;
     box-sizing: border-box;
     cursor: pointer;
-    -webkit-appearance: none; /* Reset domyślnego wyglądu systemowego */
+    -webkit-appearance: none; 
     appearance: none;
 }
 
-/* Kolory opcji po rozwinięciu listy */
+
 select option {
     background-color: #111b24;
     color: #fff;
@@ -888,24 +885,24 @@ input[type="number"]:focus {
     background: #111b24;
 }
 
-/* Kontener grupy checkboxa */
+
 .checkbox-group {
     margin: 32px 0;
     width: 100%;
 }
 
-/* Główna etykieta jako stabilny siatka (Grid) */
+
 .custom-checkbox {
     display: grid;
-    grid-template-columns: auto 1fr; /* Pierwsza kolumna na kwadrat, druga na tekst */
-    align-items: center;             /* Idealne wyrównanie w pionie */
-    gap: 14px;                       /* Sztywny odstęp między kwadratem a tekstem */
+    grid-template-columns: auto 1fr; 
+    align-items: center;             
+    gap: 14px;                       
     cursor: pointer;
     user-select: none;
     width: 100%;
 }
 
-/* Ukrycie natywnego checkboxa */
+
 .custom-checkbox input[type="checkbox"] {
     position: absolute;
     opacity: 0;
@@ -913,7 +910,7 @@ input[type="number"]:focus {
     height: 0;
 }
 
-/* Nowy, niezależny kwadracik */
+
 .checkmark {
     width: 24px;
     height: 24px;
@@ -928,28 +925,28 @@ input[type="number"]:focus {
     box-sizing: border-box;
 }
 
-/* Hover na cały element podświetla kwadrat */
+
 .custom-checkbox:hover input[type="checkbox"] ~ .checkmark {
     border-color: #00d2ff;
 }
 
-/* Stan zaznaczony - tło i ptaszek SVG */
+
 .custom-checkbox input[type="checkbox"]:checked ~ .checkmark {
     background-color: #00d2ff;
     border-color: #00d2ff;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23080c10' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
 }
 
-/* Styl tekstu - blokada łamania */
+
 .checkbox-text {
     color: #cbd5e1;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1;
-    white-space: nowrap; /* KLUCZ: zakazuje przeglądarce łamania tekstu do nowej linii */
+    white-space: nowrap; 
 }
 
-/* Magiczny Przycisk Obliczeń */
+
 .calc-btn {
     position: relative;
     width: 100%;
@@ -993,7 +990,7 @@ input[type="number"]:focus {
     fill: rgba(8, 12, 16, 0.8);
 }
 
-/* Sekcja Wyniku */
+
 .price-summary {
     margin-top: 35px;
     padding-top: 25px;
@@ -1018,9 +1015,9 @@ input[type="number"]:focus {
 
 .calc-btn {
     display: block !important;
-    width: max-content !important; /* Przycisk zwęzi się idealnie do szerokości tekstu */
-    padding: 18px 40px !important; /* Doda ładne odstępy po bokach tekstu */
-    margin: 0 auto !important;     /* Wyśrodkuje zwężony przycisk */
+    width: max-content !important; 
+    padding: 18px 40px !important; 
+    margin: 0 auto !important;     
 }
 
 #Contact {
@@ -1035,44 +1032,44 @@ input[type="number"]:focus {
     color: #a0aec0;
 }
 
-/* Styling dla całej stopki */
+
 footer {
-    background: #0b1117; /* Bardzo ciemny, elegancki granat pasujący do sekcji kalkulatora */
+    background: #0b1117; 
     padding: 40px 20px;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Delikatna linia oddzielająca na górze */
+    border-top: 1px solid rgba(255, 255, 255, 0.05); 
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* Tekst z prawami autorskimi */
+
 footer p {
-    color: #718096; /* Stonowany, szary kolor tekstowy */
+    color: #718096; 
     font-size: 0.95rem;
-    margin-bottom: 20px; /* Odstęp między tekstem a linkami */
+    margin-bottom: 20px; 
 }
 
-/* Kontener na listę linków */
+
 footer ul {
     display: flex;
-    justify-content: center; /* Wyśrodkowanie linków w poziomie */
-    flex-wrap: wrap;         /* Pozwala linkom przejść do nowej linii na telefonach */
-    list-style: none;        /* Całkowite usunięcie czarnych kropek z listy */
+    justify-content: center; 
+    flex-wrap: wrap;         
+    list-style: none;        
     padding: 0;
     margin: 0;
-    gap: 30px;               /* Elegancki, równy odstęp między linkami */
+    gap: 30px;               
 }
 
-/* Wygląd samych linków */
+
 footer ul li a {
-    color: #a0aec0;          /* Przyjemny dla oka, jasnoszary kolor */
-    text-decoration: none;   /* Usunięcie domyślnego podkreślenia */
+    color: #a0aec0;          
+    text-decoration: none;   
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.3s ease; /* Płynne przejście koloru po najechaniu */
+    transition: all 0.3s ease; 
 }
 
-/* Efekt po najechaniu myszką na link w stopce */
+
 footer ul li a:hover {
-    color: #00d2ff;          /* Zmiana koloru na ten sam błękit, który masz w przyciskach */
-    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5); /* Delikatna błękitna poświata */
+    color: #00d2ff;          
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5); 
 }
