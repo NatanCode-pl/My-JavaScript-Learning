@@ -10,7 +10,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  color: #f0efed; /* Base gold color */
+  color: #f0efed; 
     text-shadow:
       0 0 5px #FFD700,
       0 0 10px #FFC300,
@@ -23,7 +23,7 @@ h1 {
     font-size: 3rem;
     text-align: center;
     margin-top: 0;
-    color: #f0efed; /* Base gold color */
+    color: #f0efed; 
     text-shadow:
       0 0 5px #FFD700,
       0 0 10px #FFC300,
@@ -34,18 +34,18 @@ h1 {
 
 .menu {
     display: flex;
-    justify-content: center; /* Przesuwa całe menu do prawej krawędzi */
-    align-items: center;      /* Wyrównuje elementy w pionie (jeśli to konieczne) */
+    justify-content: center; 
+    align-items: center;      
     padding: 0;
     margin: 0;
-    background-color: #333333; /* Przeniesione tło tutaj, żeby pasek ciągnął się od prawej */
+    background-color: #333333; 
 }
 
 .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Zmieniamy ul też na flex, aby pozbyć się floatów */
+    display: flex; 
 }
 
 .menu ul li a {
@@ -64,7 +64,7 @@ h2 {
     font-size: 2rem;
     text-align: center;
     margin-top: 0;
-    color: #f0efed; /* Base gold color */
+    color: #f0efed; 
     text-shadow:
       0 0 5px #FFD700,
       0 0 10px #FFC300,
@@ -78,7 +78,7 @@ p {
     font-size: 1.2rem;
     text-align: center;
     margin-top: 0;
-    color: #f0efed; /* Base gold color */
+    color: #f0efed; 
     text-shadow:
       0 0 5px #FFD700,
       0 0 10px #FFC300,
@@ -89,20 +89,20 @@ p {
 
 .zamowienia {
     display: flex;
-    justify-content: center; /* Środkuje w poziomie */
+    justify-content: center; 
     align-items: center; 
     min-height: 80vh;
     padding: 40px 0;
 }
 
-/* From Uiverse.io by OliverZeros */ 
+
 button {
   all: unset;
 }
 
 .header-button {
     display: flex;
-    justify-content: center; /* Środkuje w poziomie */
+    justify-content: center; 
     align-items: center; 
     margin-bottom: 40px;
     margin-top: 40px;
@@ -240,7 +240,7 @@ button {
 }
 
 
-/* From Uiverse.io by alexruix */ 
+ 
 .form-box {
   width: 100%;
   max-width: 350px;
@@ -260,7 +260,7 @@ button {
   text-align: center;
 }
 
-/*Form text*/
+
 .title {
   font-weight: bold;
   font-size: 1.6rem;
@@ -271,7 +271,7 @@ button {
   color: #666;
 }
 
-/*Inputs box*/
+
 .form-container {
   overflow: hidden;
   border-radius: 8px;
@@ -309,7 +309,7 @@ button {
   text-decoration: underline;
 }
 
-/*Button*/
+
 .form button {
   background-color: #0066ff;
   color: #fff;
@@ -327,35 +327,35 @@ button {
 }
 
 
-/* Główny kontener dla wszystkich bestsellerów */
+
 .bestsellers {
   display: flex;
-  flex-direction: row;      /* Układa elementy obok siebie */
-  justify-content: center;  /* Środkuje produkty na stronie */
-  gap: 30px;                /* Tworzy równe odstępy między produktami */
-  flex-wrap: wrap;          /* W razie zbyt małego ekranu, produkty przejdą do nowej linii zamiast się psuć */
+  flex-direction: row;      
+  justify-content: center;  
+  gap: 30px;                
+  flex-wrap: wrap;          
   text-align: center;
   padding: 20px;
 }
 
-/* Styl dla nagłówka, żeby nie próbował wskoczyć w linię z produktami */
+
 .bestsellers h2 {
-  width: 100%;              /* Zmusza nagłówek do zajęcia całej szerokości na górze */
+  width: 100%;              
   margin-bottom: 20px;
 }
 
-/* Twój obecny kod dla pojedynczego produktu (zostaje bez zmian) */
+
 .bestseller {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1;                  /* Sprawia, że kolumny mają równą szerokość */
-  max-width: 300px;         /* Ogranicza maksymalną szerokość jednej kolumny */
+  flex: 1;                  
+  max-width: 300px;         
 }
 
-/* Zmniejszyłem szerokość obrazka, żeby 3 sztuki zmieściły się obok siebie */
+
 .bestseller img {
-  width: 100%;              /* Obrazek dopasuje się do szerokości kontenera .bestseller */
+  width: 100%;              
   height: auto;
   border-radius: 8px;
 }
